@@ -22,7 +22,7 @@ ${KERNEL_CONFIG}: config
 
 linux-config: config
 	cp config linux/.config
-	make -C linux nconfig
+	make -C linux nconfig ARCH=arm
 	cp linux/.config config
 
 clean:
