@@ -1,6 +1,6 @@
 .PHONY: all clean linux-config
 
-TARGET=linux/arch/arm/boot/Image
+TARGET=Image
 ROOTFS_CONFIG=linux/initramfsconfig
 ROOTFS_DIR=linux/usr/initramfs
 KERNEL_CONFIG=linux/.config
@@ -10,7 +10,7 @@ all: ${TARGET}
 
 ${TARGET}: ${ROOTFS_CONFIG} ${ROOTFS_DIR} ${KERNEL_CONFIG}
 	make -C linux -j 3 ARCH=arm CROSS_COMPILE=${CCPREFIX}
-	cp linux/arch/arm/boot/Image .
+	cp linux/arch/arm/boot/Image $@
 
 ${ROOTFS_CONFIG}: initramfsconfig
 	cp $< $@
@@ -28,5 +28,5 @@ linux-config: config
 
 clean:
 	make -C linux mrproper
-	rm -rf ${ROOTFS_CONFIG} ${ROOTFS_DIR} ${KERNEL_CONFIG}
+	rm -rf ${TARGET} ${ROOTFS_CONFIG} ${ROOTFS_DIR} ${KERNEL_CONFIG}
 
