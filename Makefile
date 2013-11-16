@@ -10,6 +10,7 @@ all: ${TARGET}
 
 ${TARGET}: ${ROOTFS_CONFIG} ${ROOTFS_DIR} ${KERNEL_CONFIG}
 	make -C linux -j 3 ARCH=arm CROSS_COMPILE=${CCPREFIX}
+	cp linux/arch/arm/boot/Image .
 
 ${ROOTFS_CONFIG}: initramfsconfig
 	cp $< $@
@@ -21,9 +22,9 @@ ${KERNEL_CONFIG}: config
 	cp $< $@
 
 linux-config: config
-	cp config linux/.config
+	mv config linux/.config
 	make -C linux nconfig ARCH=arm
-	cp linux/.config config
+	mv linux/.config config
 
 clean:
 	make -C linux mrproper
