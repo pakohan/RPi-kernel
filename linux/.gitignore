@@ -9,6 +9,10 @@
 #
 # Normal rules
 #
+
+initramfsconfig
+usr/initramfs/
+
 .*
 *.o
 *.o.*
