@@ -562,39 +562,8 @@ CONFIG_TUN=m
 #
 # CAIF transport drivers
 #
-CONFIG_ETHERNET=y
-# CONFIG_NET_VENDOR_BROADCOM is not set
-# CONFIG_NET_VENDOR_CHELSIO is not set
-# CONFIG_DM9000 is not set
-# CONFIG_DNET is not set
-# CONFIG_NET_VENDOR_FARADAY is not set
-# CONFIG_NET_VENDOR_INTEL is not set
-# CONFIG_NET_VENDOR_MARVELL is not set
-# CONFIG_NET_VENDOR_MICREL is not set
-# CONFIG_NET_VENDOR_NATSEMI is not set
-# CONFIG_ETHOC is not set
-# CONFIG_NET_VENDOR_SMSC is not set
-# CONFIG_NET_VENDOR_STMICRO is not set
-CONFIG_PHYLIB=m
-
-#
-# MII PHY device drivers
-#
-# CONFIG_MARVELL_PHY is not set
-# CONFIG_DAVICOM_PHY is not set
-# CONFIG_QSEMI_PHY is not set
-# CONFIG_LXT_PHY is not set
-# CONFIG_CICADA_PHY is not set
-# CONFIG_VITESSE_PHY is not set
-# CONFIG_SMSC_PHY is not set
-# CONFIG_BROADCOM_PHY is not set
-# CONFIG_ICPLUS_PHY is not set
-# CONFIG_REALTEK_PHY is not set
-# CONFIG_NATIONAL_PHY is not set
-# CONFIG_STE10XP is not set
-# CONFIG_LSI_ET1011C_PHY is not set
-# CONFIG_MICREL_PHY is not set
-# CONFIG_MDIO_BITBANG is not set
+# CONFIG_ETHERNET is not set
+# CONFIG_PHYLIB is not set
 # CONFIG_PPP is not set
 # CONFIG_SLIP is not set
 
