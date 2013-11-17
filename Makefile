@@ -1,6 +1,6 @@
 .PHONY: all clean linux-config
 
-TARGET=Image
+TARGET=kernel.img
 ROOTFS_CONFIG=linux/initramfsconfig
 ROOTFS_DIR=linux/usr/initramfs
 KERNEL_CONFIG=linux/.config
