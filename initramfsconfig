@@ -3,6 +3,7 @@
 # usr/initramfs/
 # Last modified: 1384605248.0000000000
 
+file /mount.sh usr/initramfs/mount.sh 755 19874 201
 file /net.sh usr/initramfs/net.sh 755 19874 201
 file /.profile usr/initramfs/.profile 644 19874 201
 dir /sbin 755 19874 201
